@@ -4,7 +4,7 @@ public with sharing class RestCallouts {
         //1. Prepare HttpRequest and wrap all the necessary data in it
         //1. HttpRequest'i hazırlayın ve gerekli tüm verileri içine sarın
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('https://th-apex-http-callout.herokuapp.com/animals');
+        request.setEndpoint('https://th-apex-http-callout.herokuapp.com/animals');  //! org'dan remote site settings'den izin vermeliyiz.
         request.setMethod('GET');//! her zaman büyük harf olacak
 
         //2. Prepare Internet
@@ -40,10 +40,32 @@ public with sharing class RestCallouts {
          //System.debug(jsonString);
 
          //Convert to jsonString into sObject records
+         //! ctr+shift+p ye bas,yukarıya refresh yaz ve refresh sobject definitions ı seç. Sonra custom sobjecte tıkla ve objenin fieldları otomatik gelsin
          EcommerceProductWrapper epw = (EcommerceProductWrapper)JSON.deserialize(jsonString, EcommerceProductWrapper.class);
-         List<EcommerceProductWrapper.ProductWrapper> pws = epw.products;
-      }
-      return response;
+            List<EcommerceProductWrapper.ProductWrapper> pws = epw.products;
+            List<Ecommerce_Product__c> products = new List<Ecommerce_Product__c>();
+            for(EcommerceProductWrapper.ProductWrapper pw : pws) {
+                Ecommerce_Product__c ep = new Ecommerce_Product__c();
+                ep.Product_Id__c = pw.id;
+                ep.Name = pw.title;
+                ep.Description__c = pw.description;
+                ep.Price__c = pw.price;
+                ep.Discount_Percentage__c = pw.discountPercentage;
+                ep.Rating__c = pw.rating;
+                ep.Stock__c = pw.stock;
+                ep.Brand__c = pw.brand;
+                ep.Category__c = pw.category;
+                ep.Thumbnail__c = pw.thumbnail;
+                products.add(ep);
+            }
+            //insert records
+            try {
+                insert products;
+            } catch(Exception ex) {
+                System.debug(ex.getMessage());
+            }
+        }
+        return response;
+    }
 
-   }
 }
