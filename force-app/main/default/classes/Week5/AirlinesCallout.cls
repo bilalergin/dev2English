@@ -14,6 +14,22 @@ public with sharing class AirlinesCallout {
          
 
         //Convert to jsonString into sObject records
+        // List<AirlinesWrapper> aws = (List<AirlinesWrapper>)JSON.deserialize(jsonString, List<AirlinesWrapper>.class);
+        // List<Airlines__c> liastAir = new List<Airlines__c>();
+        // for (AirlinesWrapper aw : aws) {
+        //   Airlines__c airline = new Airlines__c();
+        // airline.Airlines_Id__c = aw.id;
+        // airline.Name = aw.name;
+        // airline.Country__c = aw.country;
+        // airline.Logo_URL__c = aw.logo; 
+        // airline.Slogan__c = aw.slogan;
+        // airline.Head_Quaters__c = aw.head_quaters;
+        // airline.Website__c = aw.website;
+        // airline.Established__c = aw.established;
+        // liastAir.add(airline);
+        
+        // }
+        // insert liastAir; //!17-32 satırlar 1 record değil tüm recordları istediğimizde kullanılır.
         AirlinesWrapper aw = (AirlinesWrapper)JSON.deserialize(jsonString, AirlinesWrapper.class);
         Airlines__c airline = new Airlines__c();
         airline.Airlines_Id__c = aw.id;
