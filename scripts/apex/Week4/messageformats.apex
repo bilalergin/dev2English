@@ -36,3 +36,10 @@ System.debug(jsonString);
     <Industry>Education</Industry>
 </Account>
 
+//1. Prepare HttpRequest and wrap all the necessary information
+HttpRequest request = new HttpRequest();
+request.setEndpoint('');
+request.setMethod('POST');
+request.setBody('<json body>');
+request.setHeader('Content-Type', 'application/json;charset=UTF-8');
+request.setHeader('Authorization', 'Bearer dfe085965de938aa9fa71eb14785d23afc0043826a543bd8548a6f3a84da1a52');
