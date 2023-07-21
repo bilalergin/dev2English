@@ -59,4 +59,3 @@ public with sharing class RestCalloutsMock implements HttpCalloutMock {
         return null;//! callotta doğrudan test yapamıyoruz bu nedenle mock kullanıyoruz
     }
 }
-       

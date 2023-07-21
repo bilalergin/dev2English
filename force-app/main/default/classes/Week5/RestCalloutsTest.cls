@@ -120,5 +120,3 @@ public with sharing class RestCalloutsTest {
         Test.stopTest();
     }
 }
-
-
