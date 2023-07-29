@@ -1,4 +1,5 @@
-import { LightningElement, track } from 'lwc';//! 29.07.2023
+import { LightningElement, track } from 'lwc';
+//! 29.07.2023
 //! @track bir decoratördür
 //! özellikleri 
 //! 1. eklendiği valuyu Private yapar
