@@ -1,0 +1,31 @@
+<template>
+  <lightning-card>
+    <div class="slds-text-title_bold"
+    style="text-align: center;font-size:xx-large; color:brown;background-color:chartreuse">
+        CALCULATOR
+    </div>
+    <div class="slds-var-m-around_medium">
+      <div>
+        <div >
+            <lightning-input type="number" label="Enter the first number" value={number1} onchange={handleInputChange}></lightning-input>
+            <lightning-input type="number" label="Enter the second number" value={number2} onchange={handleInputChange}></lightning-input>
+        </div >
+        <div class="slds-var-m-top_small">
+             
+            
+          <lightning-button class="slds-var-m-right_small" variant="brand" label="Sum" onclick={addNumbers}></lightning-button>
+          <lightning-button class="slds-var-m-right_small" variant="Destructive" label="Minus" onclick={minusNumbers}></lightning-button>    
+          <lightning-button class="slds-var-m-right_small" variant="Success" label="Multiply" onclick={multiplyNumbers}></lightning-button>
+          <lightning-button variant="brand" label="Divide" onclick={divideNumbers}></lightning-button>
+          </div>
+             
+        <div class="slds-var-m-top_small">
+            <p>Result: {result}</p>
+        </div>
+    </div>
+  </div>
+  
+  </lightning-card>
+
+</template>
+<!--  -->
