@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Get Picklist Values By Record Type" icon-name="standard:lead">
+      <div class="slds-var-m-around_medium">
+        <lightning-combobox
+        label="Lead Source"
+        name = "Lead Source"
+        options={leadSourceOptions}       
+        onchange={changeHandler} 
+        ></lightning-combobox>
+        <lightning-combobox
+        label="Lead Status"
+        name = "Lead Status"
+        options={leadStatusOptions}       
+        onchange={changeHandler} 
+
+        ></lightning-combobox>
+        <lightning-combobox
+        label="Rating"
+        name = "Rating"
+        options={ratingOptions}       
+        onchange={changeHandler} 
+
+        ></lightning-combobox>
+       
+
+  <div class="slds-var-m-top_small"></div>
+  <div>Selected Lead Source : {selectedleadSource}</div>
+  <div>Selected Lead Status : {selectedleadStatus}</div>
+  <div>Selected Rating : {selectedRating}</div>
+      </div>
+    </lightning-card>
+</template>

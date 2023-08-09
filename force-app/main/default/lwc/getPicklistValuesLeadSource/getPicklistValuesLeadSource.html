@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Lead Source" icon-name="standard:contact">
+      <div class="slds-var-m-around_medium">
+        <div>Vendor RT Id: {vendorRtId}</div>
+        <lightning-combobox
+          label="Lead Source"
+          options={leadSourceOptions}
+          onchange={changeHandler} 
+           
+        ></lightning-combobox>
+        <div>
+          Selected Lead Source : {selectedLeadSource}
+      </div>
+      </div>
+    </lightning-card>
+</template>

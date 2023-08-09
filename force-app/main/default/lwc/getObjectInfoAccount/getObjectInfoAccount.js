@@ -4,6 +4,9 @@ import ACC_OBJECT from '@salesforce/schema/Account';
 
 export default class GetObjectInfoAccount extends LightningElement {
     
+    //! 05.08.2023
+
+
     accountRtId;
 
     @wire(getObjectInfo, {objectApiName: ACC_OBJECT})

@@ -3,6 +3,10 @@ import { LightningElement, wire } from 'lwc';
 import INDUSTRY_FIELD from '@salesforce/schema/Account.Industry';
 import ACC_OBJECT from '@salesforce/schema/Account';
 export default class GetPicklistValuesIndustry extends LightningElement {
+
+    //! 05.08.2023
+
+
     accountRtId; //undefined
     industryOptions = [];
     selectedIndustry;
