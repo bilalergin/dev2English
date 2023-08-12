@@ -1,0 +1,10 @@
+.error-messages{
+
+    background-color: red;
+    color: white;/*yazı reng*/
+    border: 1px solid #c70000;/*çerçevenin kenar çizgi rengi*/
+    padding: 13px;/*yazının etrafındaki boşluk*/
+    margin: 10px 0;/*kutucuğun etrafındaki boşluk*/
+    border-radius: 12px;/*kutucuğun kenar keskinliği*/
+
+}
