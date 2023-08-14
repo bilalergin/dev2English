@@ -4,6 +4,9 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 export default class UpdateRecordProduct extends LightningElement {
    
+//update record yaparken objeyi neden import etmiyoruz?akşamki derste yapmamıştık./Çünkü sadece record Id sini istiyor. Bu nedenle objeyi import etmiyoruz.
+
+
    proId = "a05Hu00000dnJFCIA2";
    product;
    formdata = {};

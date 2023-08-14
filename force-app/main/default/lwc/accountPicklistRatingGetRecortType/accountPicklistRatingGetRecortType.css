@@ -1,0 +1,36 @@
+.formHeader{
+    background-color: darkslateblue;
+    padding: 4px;
+    color: white;
+    text-align: center;
+    font-family: fantasy;
+   font-style: italic;
+    border-radius: 6px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  box-shadow: blueviolet;
+}
+.formHeader1{
+    background-color: pink;
+    padding: 4px;
+    color: black;
+    text-align: center;
+   font-family: fantasy;
+   font-style: italic;
+    border-radius: 6px;
+    font-weight: bold;
+    /* letter-spacing: 1px; */
+  box-shadow: blueviolet;
+}
+.form{
+    background-color: white;
+    padding: 6px;
+    color: black;
+    text-align: center;
+    font-family: monospace;
+   font-style: normal;
+    border-radius: 8px;
+    font-weight: bolder;
+    /* letter-spacing: 1px; */
+  box-shadow: blueviolet;
+}

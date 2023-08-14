@@ -41,7 +41,7 @@ inputs.forEach(item => {
         createRecord(recordInput)
             .then(result => {
                 console.log(result);
-                this.showToast("Success", "Account record has been created successfully!", "success");
+                this.showToast("Success", "Case record has been created successfully!", "success");
                 this.cancelHandler();
             })
             .catch(error => {

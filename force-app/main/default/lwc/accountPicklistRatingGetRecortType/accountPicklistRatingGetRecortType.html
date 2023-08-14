@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Picklist Values: Rating" icon-name="standard:apex_plugin">
+        <div class="slds-var-m-around_medium"> 
+    <lightning-combobox class="form"       
+    label="Select Rating"
+    options={ratingOptions}
+    onchange={clickHandler} 
+  ></lightning-combobox>
+  <div class="slds-var-m-around_medium">
+     <span class="formHeader slds-var-m-right_x-small">Selected Rating : </span> <span class="formHeader1"> {selectedRating}</span> 
+  </div>
+      
+        </div>
+    </lightning-card>
+</template>

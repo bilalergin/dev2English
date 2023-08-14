@@ -70,12 +70,12 @@ inputs.forEach(item => {
     }
 
     @wire(getObjectInfo, {objectApiName: ACCOUNT_OBJECT})
-    accountInfo;
+    accountInfo;//property ile karşılama
 
     @wire(getPicklistValuesByRecordType, {
         objectApiName: ACCOUNT_OBJECT,
         recordTypeId: '$accountInfo.data.defaultRecordTypeId'
-    }) picklistHandler({data, error}) {
+    }) picklistHandler({data, error}) {//function ile karşılama
         if(data) {
             console.log(data);
             this.typeOptions = data.picklistFieldValues.Type.values;
