@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Account By Type" icon-name="standard:account" variant="base">
+      <div class="slds-var-m-around_medium " >
+         <template lwc:if={accounts}>
+            <template for:each={accounts} for:item="acc" >
+                <div class="slds-box slds-var-m-around_small box-style"  key = {acc.Id} >
+                    <strong>{acc.Name}</strong><br>
+                    {acc.Type}, {acc.Industry} <br>
+                    {acc.AnnualRevenue}
+                </div>
+            </template>
+         </template>
+        
+      </div>
+    </lightning-card>
+</template>

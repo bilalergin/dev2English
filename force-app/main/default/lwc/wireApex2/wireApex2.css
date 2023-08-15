@@ -1,0 +1,30 @@
+/* .content-style{
+    border: 2px solid black;
+    margin-bottom: 12px;
+    padding: 6px;
+    background-color: lime;
+    border-radius: 9px
+} */
+
+.box-style {
+    border-radius: 12px;
+    border-style: solid;
+    animation: glow-box-blue 1s ease infinite;
+}
+
+@keyframes glow-box-blue {
+    0% {
+        border-color: #1b96ff;
+        box-shadow: 0 0 5px #1b96ff;
+    }
+
+    50% {
+        border-color: #1b96ff;
+        box-shadow: 0 0 12px #1b96ff;
+    }
+
+    100% {
+        border-color: #1b96ff;
+        box-shadow: 0 0 5px #1b96ff;
+    }
+}

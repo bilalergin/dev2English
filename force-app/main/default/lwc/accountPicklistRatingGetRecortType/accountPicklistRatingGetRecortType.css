@@ -3,7 +3,7 @@
     padding: 4px;
     color: white;
     text-align: center;
-    font-family: fantasy;
+    /* font-family: fantasy; */
    font-style: italic;
     border-radius: 6px;
     font-weight: bold;
@@ -15,7 +15,7 @@
     padding: 4px;
     color: black;
     text-align: center;
-   font-family: fantasy;
+   font-family:'Arial';
    font-style: italic;
     border-radius: 6px;
     font-weight: bold;
@@ -27,7 +27,7 @@
     padding: 6px;
     color: black;
     text-align: center;
-    font-family: monospace;
+    font-family: Georgia, 'Times New Roman', Times, serif;
    font-style: normal;
     border-radius: 8px;
     font-weight: bolder;
