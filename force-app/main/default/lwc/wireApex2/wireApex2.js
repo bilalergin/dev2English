@@ -1,5 +1,6 @@
 import getTopAccountsByType from '@salesforce/apex/AccountCtrl.getTopAccountsByType';
 import { LightningElement, wire } from 'lwc';
+    //15.08.2023
 
 export default class WireApex2 extends LightningElement {
 

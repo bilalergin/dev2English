@@ -1,5 +1,6 @@
 import getTopAccounts from '@salesforce/apex/AccountCtrl.getTopAccounts';
 import { LightningElement, wire } from 'lwc';
+    //15.08.2023
 
 const COLUMNS = [
     {label: "Account Name", fieldName: "Name", type: "text"},

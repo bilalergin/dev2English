@@ -1,5 +1,5 @@
 public with sharing class AccountCtrl {
-    
+    //15.08.2023
     @AuraEnabled(cacheable=true)
     public static List<Account> getTopAccounts() {
         return [SELECT Id, Name, Type, Industry, AnnualRevenue

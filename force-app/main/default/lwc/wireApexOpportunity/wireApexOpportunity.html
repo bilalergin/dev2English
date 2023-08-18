@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Top 5 Opportunities" icon-name="standard:opportunity">
+      <div class="slds-var-m-around_medium">
+         <lightning-datatable
+         key-field="id"
+         data={opportunities}
+         columns={columns}
+         hide-checkbox-column="true"
+ 
+ >
+ <!-- hide-checkbox-column="true" gelen checbox ları saklıyoruz. -->
+     </lightning-datatable>
+      </div>
+     
+    </lightning-card>
+ </template>

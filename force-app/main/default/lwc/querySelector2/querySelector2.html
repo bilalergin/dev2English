@@ -1,0 +1,25 @@
+<template>
+    <lightning-card icon-name="standard:record_lookup" title="Query Selectors &#129333;&#8205;&#9792;&#65039;">
+        <div class="slds-var-m-around_medium">
+            <h1 class="slds-align_absolute-center">This is a header tag !</h1>
+            <p class="slds-align_absolute-center">This is a paragraph tag !</p>
+
+          
+           <template for:each={fruits} for:item="fruit">
+            <div key={fruit} 
+            class="child">
+                {fruit} 🍌🍎🍊🍇🐉
+            </div>
+       </template>
+    </div>
+       <div>
+        <lightning-button class="slds-var-m-top_small slds-align_absolute-center"
+        icon-name="utility:search"
+          variant="success"
+          label="Click me" 
+          onclick={handleClick} 
+        ></lightning-button>
+    </div>
+   
+    </lightning-card>
+</template>

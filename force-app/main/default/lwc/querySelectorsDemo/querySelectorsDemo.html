@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Query Selectors" icon-name="standard:record_lookup">
+     <div class="slds-var-m-around_medium">
+        <h1>This is a header tag!</h1>
+        <p>This is a pragraph tag!</p>
+        <template for:each={fruits} for:item="fruit">
+            <div key={fruit} class="fruit">{fruit}</div></template>
+       <div class="slds-var-m-top_small ">
+        <lightning-button 
+          label="Click me" 
+          onclick={clickHandler} 
+        ><!-- variant="base" : butona variant vermeyince neutral geliyor-->
+    </lightning-button>
+
+       </div>
+        
+      </div>
+    </lightning-card>
+</template>
