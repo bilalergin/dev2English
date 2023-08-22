@@ -18,4 +18,13 @@ public with sharing class AccountCtrl {
         ORDER BY AnnualRevenue DESC
         LIMIT 5];
     }
+    
+    @AuraEnabled(cacheable=true) //19.08.2023 accountBy Industrye bağlı
+    public static List<Account> getAccountsByIndustry(String industry) {
+        return [SELECT Id, Name, Type, Industry, AnnualRevenue
+        FROM Account
+        WHERE AnnualRevenue != null
+        AND Industry =:industry
+        ORDER BY AnnualRevenue DESC];
+    }
 }
