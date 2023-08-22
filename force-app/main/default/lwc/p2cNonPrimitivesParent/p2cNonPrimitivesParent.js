@@ -3,7 +3,7 @@ import { LightningElement } from 'lwc';
 export default class P2cNonPrimitivesParent extends LightningElement {
     carousels = [
         {
-            src: "https://www.lightningdesignsystem.com/assets/images/carousel/carousel-01.jpg",
+            src: "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg",
             header: "First Card",
             description: "First card description.",
             alternativeText: "First card accessible description.",
