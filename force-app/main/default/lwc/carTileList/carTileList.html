@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="CARS AVAIBLE" icon-name="standard:account" >
+    <div class="slds-var-m-around_medium">
+        <template lwc:if={cars.data}>
+            <div class="content">
+                <template for:each={cars.data} for:item="car">        
+                    <c-car-tile
+                    key={car.id}
+                    car={car}>
+                </c-car-tile>
+                </template>
+            </div>
+        </template>
+        
+      </div>
+    </lightning-card>
+</template>

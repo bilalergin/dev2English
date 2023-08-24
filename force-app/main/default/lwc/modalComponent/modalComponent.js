@@ -3,7 +3,11 @@ import { LightningElement } from 'lwc';
 export default class ModalComponent extends LightningElement {
 
     closeHandler() {
-        const evt = new CustomEvent('close');
+        const message ={
+            name: "Bilal",
+            title: "Salesforce Developer"
+        };
+        const evt = new CustomEvent('close',{detail: message});//buradaki close eventını parent htmlde onclose olarak çağırdık
         this.dispatchEvent(evt);
     }
 }

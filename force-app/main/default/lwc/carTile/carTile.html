@@ -1,0 +1,21 @@
+<template>
+    <div>
+        <div class="content">
+<img src={car.Picture_URL__c} alt="Car Image" class="slds-align_absolute-center carImage"/>
+            <div>
+                <p class="slds-align_absolute-center car-title">
+                        {car.Name}
+                </p>
+                <p class="slds-align_absolute-center">Price: 
+                    <lightning-formatted-number 
+                      value={car.Price__c}
+                      format-style="currency"
+                      currency-code="USD"
+                      currency-display-as="symbol"
+                    ></lightning-formatted-number>
+
+                </p>
+            </div>
+        </div>
+    </div>
+</template>
