@@ -2,10 +2,15 @@ import CATEGORY__FIELD from "@salesforce/schema/Car__c.Category__c";
 import { getObjectInfo, getPicklistValues } from "lightning/uiObjectInfoApi";
 import { LightningElement, wire } from "lwc";
 import CAR_OBJECT from "@salesforce/schema/Car__c";
+import CAR_CHANNEL from "@salesforce/messageChannel/CarChannel__c";
+import { MessageContext, publish } from "lightning/messageService";
 
 export default class CarFilter extends LightningElement {
+  
   categoryOptions = [];
   selectedCategory = "All";
+
+  @wire(MessageContext)context;
 
   @wire(getObjectInfo, {objectApiName: CAR_OBJECT})carInfo;
 
@@ -29,6 +34,17 @@ export default class CarFilter extends LightningElement {
 
   changeHandler(event){
         this.selectedCategory = event.target.value;
+        //prepare message
+        const message = {
+          carType: this.selectedCategory
+        };
+        console.log("Message: "+ JSON.stringify(message));
+        //publish message
+        publish(
+          this.context,
+          CAR_CHANNEL,
+          message
+        );
   }
 
 }

@@ -6,7 +6,8 @@
                 <template for:each={cars.data} for:item="car">        
                     <c-car-tile
                     key={car.id}
-                    car={car}>
+                    car={car}
+                    oncarselect={carSelectHandler}>
                 </c-car-tile>
                 </template>
             </div>
